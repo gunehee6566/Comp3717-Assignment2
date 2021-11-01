@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "527586202659",
+    "firebase_url": "https://assignment2-91ac1-default-rtdb.firebaseio.com",
+    "project_id": "assignment2-91ac1",
+    "storage_bucket": "assignment2-91ac1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527586202659:android:1696ad94a529d1f33bcd96",
+        "android_client_info": {
+          "package_name": "ca.bcit.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527586202659-gglg7u9c3f126r10k623vu76139p3sqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPZRUGlv-fe8uFinud5AWB5bpOn_eN3rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527586202659-gglg7u9c3f126r10k623vu76139p3sqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527586202659:android:bec065688a66117a3bcd96",
+        "android_client_info": {
+          "package_name": "ca.bcit.park_tamai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527586202659-gglg7u9c3f126r10k623vu76139p3sqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPZRUGlv-fe8uFinud5AWB5bpOn_eN3rk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527586202659-gglg7u9c3f126r10k623vu76139p3sqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
