@@ -6,4 +6,12 @@
     <string name="case_by_health_authority">Case by health authority</string>
     <string name="case_by_gender">Case by gender</string>
     <string name="case_by_age_group">Case by age group</string>
+
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_title">LOGIN</string>
+    <string name="create_new_account">Create new account</string>
 </resources>
