@@ -23,6 +23,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btnLogout = findViewById(R.id.btnLogout);
+        btn_month_year = findViewById(R.id.btn_month_year);
+        btn_ha = findViewById(R.id.btn_ha);
+        btn_gender = findViewById(R.id.btn_gender);
+        btn_age = findViewById(R.id.btn_age);
+
+        Intent date_intent = new Intent(this, byDate.class);
+        Intent ha_intent = new Intent(this, byHA.class);
+        Intent gender_intent = new Intent(this, byGender.class);
+        Intent age_intent = new Intent(this, byAge.class);
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,5 +42,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_month_year.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(date_intent);
+            }
+        });
+
+        btn_ha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(ha_intent);
+            }
+        });
+
+        btn_gender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(gender_intent);
+            }
+        });
+
+        btn_age.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(age_intent);
+            }
+        });
     }
 }
