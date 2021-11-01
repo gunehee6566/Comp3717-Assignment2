@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Park_Tamai">
         <activity
+            android:name=".byHA"
+            android:exported="true" />
+        <activity
+            android:name=".byDate"
+            android:exported="true" />
+        <activity
+            android:name=".byAge"
+            android:exported="true" />
+        <activity
+            android:name=".byGender"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Park_Tamai</string>
+    <string name="genie_info">Geunhee Park, A01196275</string>
+    <string name="reo_info">Reo Tamai, A01224716</string>
+    <string name="case_by_month_year">Case by month &amp; year</string>
+    <string name="case_by_health_authority">Case by health authority</string>
+    <string name="case_by_gender">Case by gender</string>
+    <string name="case_by_age_group">Case by age group</string>
 </resources>
