@@ -11,15 +11,19 @@
         android:theme="@style/Theme.Park_Tamai">
         <activity
             android:name=".byHA"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".byDate"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".byAge"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".byGender"
+            android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

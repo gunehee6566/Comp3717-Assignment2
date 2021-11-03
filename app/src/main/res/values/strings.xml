@@ -6,6 +6,9 @@
     <string name="case_by_health_authority">Case by health authority</string>
     <string name="case_by_gender">Case by gender</string>
     <string name="case_by_age_group">Case by age group</string>
+    <string name="find">Find</string>
+    <string name="year">Year</string>
+    <string name="month">Month</string>
 
     <string name="login">Login</string>
     <string name="register">Register</string>
