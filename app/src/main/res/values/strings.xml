@@ -17,4 +17,16 @@
     <string name="password">Password</string>
     <string name="login_title">LOGIN</string>
     <string name="create_new_account">Create new account</string>
+
+    <string name="less10">&lt;10</string>
+    <string name="tenTo">10-19</string>
+    <string name="twentyTo">20-29</string>
+    <string name="thirtyTo">30-39</string>
+    <string name="fortyTo">40-49</string>
+    <string name="fiftyTo">50-59</string>
+    <string name="sixtyTo">60-69</string>
+    <string name="seventyTo">70-79</string>
+    <string name="eightyTo">80-89</string>
+    <string name="ninetyTo">90+</string>
+    <string name="unknown">unknown</string>
 </resources>

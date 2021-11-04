@@ -22,6 +22,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.core.Repo;
 
 import java.util.ArrayList;
 
@@ -48,10 +49,13 @@ public class byDate extends AppCompatActivity {
 
         StaggeredGridLayoutManager lm = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(lm);
+        recyclerAdapter = new RecyclerAdapter(byDate.this, new ArrayList<Report>());
+        recyclerView.setAdapter(recyclerAdapter);
 
         btn_find.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ArrayList<Report> reports = new ArrayList<>();
                 String year = year_field.getText().toString();
                 String month = month_field.getText().toString();
                 String nextMonth = (month.equals("12"))?"1":"" + (Integer.parseInt(month) + 1);
@@ -63,14 +67,12 @@ public class byDate extends AppCompatActivity {
                 ref.orderByChild("Reported_Date").startAt(year+"-"+month).endBefore(nextYear+"-"+nextMonth).get().addOnSuccessListener(new OnSuccessListener<DataSnapshot>() {
                     @Override
                     public void onSuccess(DataSnapshot dataSnapshot) {
-                        ArrayList<Report> reports = new ArrayList<Report>();
                         dataSnapshot.getChildren().forEach(child->{
                             Report report = child.getValue(Report.class);
                             reports.add(report);
                         });
-                        recyclerAdapter = new RecyclerAdapter(byDate.this, reports);
-                        recyclerView.setAdapter(recyclerAdapter);
-                        Toast.makeText(getApplicationContext(), "" + dataSnapshot.getChildrenCount(), Toast.LENGTH_SHORT).show();
+                        recyclerAdapter.updateData(reports);
+                        Toast.makeText(getApplicationContext(), "Retrieved: " + reports.size(), Toast.LENGTH_SHORT).show();
                     }
                 });
             }

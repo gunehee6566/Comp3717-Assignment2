@@ -1,6 +1,7 @@
 package ca.bcit.park_tamai;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +31,12 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             super(cardView);
             this.cardView = cardView;
         }
+    }
+
+    public void updateData(ArrayList<Report> newReport) {
+        this.reports.clear();
+        this.reports.addAll(newReport);
+        notifyDataSetChanged();
     }
 
     @NonNull
