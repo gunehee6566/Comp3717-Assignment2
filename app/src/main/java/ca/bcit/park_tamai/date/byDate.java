@@ -1,30 +1,24 @@
-package ca.bcit.park_tamai;
+package ca.bcit.park_tamai.date;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.core.Repo;
 
 import java.util.ArrayList;
+
+import ca.bcit.park_tamai.R;
+import ca.bcit.park_tamai.Report;
 
 public class byDate extends AppCompatActivity {
 
@@ -32,7 +26,7 @@ public class byDate extends AppCompatActivity {
     private TextView year_field;
     private TextView month_field;
     private RecyclerView recyclerView;
-    private RecyclerAdapter recyclerAdapter;
+    private DateRecyclerAdapter recyclerAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,7 +43,7 @@ public class byDate extends AppCompatActivity {
 
         StaggeredGridLayoutManager lm = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(lm);
-        recyclerAdapter = new RecyclerAdapter(byDate.this, new ArrayList<Report>());
+        recyclerAdapter = new DateRecyclerAdapter(byDate.this, new ArrayList<Report>());
         recyclerView.setAdapter(recyclerAdapter);
 
         btn_find.setOnClickListener(new View.OnClickListener() {

@@ -10,15 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Park_Tamai">
         <activity
-            android:name=".byHA"
+            android:name=".ha.byHA"
             android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".byDate"
+            android:name=".date.byDate"
             android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity
-            android:name=".byAge"
+            android:name=".age.byAge"
             android:parentActivityName=".MainActivity"
             android:exported="true" />
         <activity

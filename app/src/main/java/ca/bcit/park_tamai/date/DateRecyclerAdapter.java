@@ -1,26 +1,24 @@
-package ca.bcit.park_tamai;
+package ca.bcit.park_tamai.date;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
+import ca.bcit.park_tamai.R;
+import ca.bcit.park_tamai.Report;
+
+public class DateRecyclerAdapter extends RecyclerView.Adapter<DateRecyclerAdapter.ViewHolder> {
     private Context context;
     private ArrayList<Report> reports;
 
-    public RecyclerAdapter(Context context, ArrayList<Report> reports) {
+    public DateRecyclerAdapter(Context context, ArrayList<Report> reports) {
         this.context = context;
         this.reports = reports;
     }
@@ -41,13 +39,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
     @NonNull
     @Override
-    public RecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DateRecyclerAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         CardView cardView = (CardView) LayoutInflater.from(context).inflate(R.layout.report_list, parent, false);
         return new ViewHolder(cardView);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull DateRecyclerAdapter.ViewHolder holder, int position) {
         final CardView cardView = holder.cardView;
         Report report = reports.get(position);
 

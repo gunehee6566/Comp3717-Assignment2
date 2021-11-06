@@ -9,6 +9,10 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import ca.bcit.park_tamai.age.byAge;
+import ca.bcit.park_tamai.date.byDate;
+import ca.bcit.park_tamai.ha.byHA;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_month_year;
