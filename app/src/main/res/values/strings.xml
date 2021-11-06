@@ -18,6 +18,8 @@
     <string name="login_title">LOGIN</string>
     <string name="create_new_account">Create new account</string>
 
+    <string name="female">Female</string>
+    <string name="male">Male</string>
     <string name="less10">&lt;10</string>
     <string name="tenTo">10-19</string>
     <string name="twentyTo">20-29</string>
