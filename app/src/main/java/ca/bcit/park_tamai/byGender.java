@@ -36,6 +36,8 @@ public class byGender extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_by_gender);
 
+        setTitle("# of Cases by health gender");
+
         reports = new HashMap<String, List<Report>>();
 
         female = findViewById(R.id.femaleValue);
