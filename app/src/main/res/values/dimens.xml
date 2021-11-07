@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_m">24sp</dimen>
+    <dimen name="text_input_height">48dp</dimen>
+    <dimen name="text_input_width">90dp</dimen>
+    <dimen name="space_l">30dp</dimen>
+    <dimen name="space_m">20dp</dimen>
+    <dimen name="space_s">10dp</dimen>
+</resources>

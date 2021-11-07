@@ -1,5 +1,6 @@
 package ca.bcit.park_tamai;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -8,9 +9,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +29,7 @@ public class byGender extends AppCompatActivity {
     private TextView female;
     private TextView male;
     private TextView unknown;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +41,7 @@ public class byGender extends AppCompatActivity {
         female = findViewById(R.id.femaleValue);
         male = findViewById(R.id.maleValue);
         unknown = findViewById(R.id.unknownValue);
+        progressBar = findViewById(R.id.genderProgress);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference();
@@ -70,8 +75,15 @@ public class byGender extends AppCompatActivity {
                         }
                     }
                 });
+                progressBar.setVisibility(View.INVISIBLE);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                progressBar.setVisibility(View.INVISIBLE);
+                finish();
             }
         });
     }
 
-    }
+}
